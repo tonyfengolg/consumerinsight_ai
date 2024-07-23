@@ -84,7 +84,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("OLG Resume AI 📄")
+    st.header("OLG Consumer Insight AI 📄")
     user_question = st.text_input("Ask any questions:")
     if user_question:
         handle_userinput(user_question)
