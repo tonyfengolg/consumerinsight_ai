@@ -1,13 +1,11 @@
 langchain
+PyPDF2
+python-dotenv
 streamlit
+faiss-cpu
+altair
 tiktoken
 langchain_openai
 langchain-community
 langchain-core
 streamlit-authenticator
-langchain-experimental
-tokenizers
-chromadb
-protobuf==3.20.0
-google-cloud
-google
