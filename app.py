@@ -18,15 +18,12 @@ import io
 import re
 from PIL import Image
 
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 embeddings =  AzureOpenAIEmbeddings(model='text-embedding-ada-002',api_key=st.secrets['AZURE_OPENAI_API_KEY'],
     azure_endpoint=st.secrets['AZURE_OPENAI_ENDPOINT'])
 
 #load vectorstore
-vectorstore = Chroma(collection_name='mm_rag_cj_blog', persist_directory="/vector/", 
+vectorstore = Chroma(collection_name='mm_rag_cj_blog', persist_directory="", 
                      embedding_function=embeddings)
 #load summary
 summary = pd.read_pickle('temp_dict.pkl')

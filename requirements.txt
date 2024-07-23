@@ -8,5 +8,6 @@ streamlit-authenticator
 langchain-experimental
 tokenizers
 chromadb
-protobuf==3.20.0
-pysqlite3-binary
+protobuf
+google-cloud
+google
