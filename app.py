@@ -18,6 +18,9 @@ import io
 import re
 from PIL import Image
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 embeddings =  AzureOpenAIEmbeddings(model='text-embedding-ada-002',api_key=st.secrets['AZURE_OPENAI_API_KEY'],
     azure_endpoint=st.secrets['AZURE_OPENAI_ENDPOINT'])
